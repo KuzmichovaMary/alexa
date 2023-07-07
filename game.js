@@ -120,6 +120,9 @@ function handleTouchStart(event) {
   // Handle touch start event
   console.log("Touch start at:", touchX, touchY);
   balloon.text = "Let's go";
+    center_image.image = resources.get(slides[index]);
+    index += 1;
+    index %= slides.length;
 }
 
 function handleTouchEnd(event) {
@@ -441,7 +444,7 @@ function init() {
 var leafObjects = [];
 var pangolin = new Pangolin(0, 0, "img/pangolin.png");
 var balloon = new Balloon(0, 0, "Happy Birthday", "img/balloon.png");
-var center_image = new BlurImage(null, 0, 300, 400);
+var center_image = new BlurImage(null, 0,500, 600);
 
 const resources = Object.create(Resources);
 
